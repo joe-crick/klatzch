@@ -1,11 +1,11 @@
 <!-- messenger.vue -->
 <template>
-  <div class="klatzch-messenger">
+  <div class="klatzch-messenger" v-if="display">
     <div class="klatzch-messenger-header">
       <div class="container">
         <h4>Messaging</h4>
         <!--TODO: Remove the close-messenger id used for mocking, and replace with onClick-->
-        <button class="btn btn-klatzch-tertiary pull-right" id="close-messenger">x</button>
+        <button class="btn btn-klatzch-tertiary pull-right" @click="close">x</button>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -27,8 +27,15 @@
       MessengerHistory,
       MessengerForm
     },
+    methods: {
+      close () {
+        this.display = false;
+      }
+    },
     data () {
-      return {};
+      return {
+        display: true
+      };
     }
   };
 </script>
