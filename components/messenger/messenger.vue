@@ -1,0 +1,73 @@
+<!-- messenger.vue -->
+<template>
+  <div class="klatzch-messenger">
+    <div class="klatzch-messenger-header">
+      <div class="container">
+        <h4>Messaging</h4>
+        <!--TODO: Remove the close-messenger id used for mocking, and replace with onClick-->
+        <button class="btn btn-klatzch-tertiary pull-right" id="close-messenger">x</button>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="klatzch-messenger-history-container">
+      <messenger-history></messenger-history>
+    </div>
+    <div class="klatzch-messenger-form container">
+      <messenger-form></messenger-form>
+    </div>
+  </div>
+</template>
+
+<script>
+  import MessengerHistory from './messenger-history.vue';
+  import MessengerForm from './messenger-form.vue';
+  export default {
+    name: 'app',
+    components: {
+      MessengerHistory,
+      MessengerForm
+    },
+    data () {
+      return {};
+    }
+  };
+</script>
+
+<style lang="scss">
+  @import '../../assets/scss/globals';
+
+  .klatzch-messenger {
+    height: 400px;
+    width: 300px;
+    @extend .border;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    background-color: $sea-whitish;
+    border-radius: 10px;
+    .klatzch-messenger-header {
+      border-radius: 10px 10px 0 0;
+      background-color: $sea-greenish;
+      padding: 10px;
+      h4 {
+        cursor: move;
+        display: inline-block;
+        line-height: 35px;
+      }
+    }
+    .klatzch-messenger-history-container {
+      padding-left: 7px;
+      background-color: $sea-bright-white;
+      overflow-y: scroll; // TODO: refactor vertical scrollable section
+      max-height: 57%;
+      border-radius: 5px
+    }
+    .klatzch-messenger-form {
+      .container {
+        height: 10%;
+        position: absolute;
+        bottom: 45px;
+      }
+    }
+  }
+</style>
