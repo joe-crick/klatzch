@@ -21,6 +21,7 @@ module.exports = {
    ** Add Bootstrap
    */
   css: ['bootstrap/dist/css/bootstrap.css'],
+  sass: ['~/static/app.scss'],
   /*
    ** Build configuration
    */
@@ -35,8 +36,8 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   }
-}
+};

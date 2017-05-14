@@ -1,0 +1,106 @@
+@import './imports';
+
+body {
+  background-color: $sea-whitish;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  // LINKS
+  .link {
+    cursor: pointer
+  }
+  .white-link {
+    color: $sea-whitish; // BUTTONS
+  }
+  .btn {
+    cursor: pointer;
+    &: hover {
+      background-color: $sea-pinkish;
+    }
+  }
+  .btn-klatsch-danger {
+    background-color: $sea-reddish;
+    color: $sea-whitish;
+  }
+  .btn-klatsch-success {
+    background-color: $sea-yellowish;
+    color: $sea-whitish;
+  }
+  .btn-klatsch-primary {
+    background-color: $sea-coralish;
+    color: $sea-whitish;
+  }
+  .btn-klatsch-secondary {
+    background-color: $sea-greenish;
+    color: $sea-whitish;
+  }
+  .btn-klatsch-tertiary {
+    background-color: $sea-whitish;
+    color: $sea-blackish;
+  }
+  .navbar, .dropdown-menu {
+    background-color: $sea-whitish; // TEXT
+  }
+  .sub-title {
+    font-weight: bolder;
+    margin-bottom: 5px; // LAYOUT
+  }
+  .vertical-separator {
+    border-right: 1px solid $border-color;
+  }
+  .klatsch-tooltip {
+    margin-left: 5px;
+    .klatsch-tooltip-body {
+      @extend .border;
+    }
+  }
+  .highlight-row:hover {
+    background-color: $sea-greenish;
+    opacity: 10;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
+  .form-check-input {
+    margin-right: 4px; // IMAGES
+  }
+  .mini-profile-image {
+    height: 40px;
+    width: 40px; // WIDGETS
+  }
+  .vertical-scrollable-section {
+    overflow-y: scroll;
+    max-height: 200px; // Override style in BS tabs
+  }
+  .nav-tabs {
+    a {
+      color: $sea-blackish;
+    }
+    .nav-link.active {
+      background-color: $sea-whitish;
+    }
+  }
+
+}
+
+main {
+  margin-top: 75px; // Always show scroll bars when they're present, because not doing so is just bad usability!
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+}

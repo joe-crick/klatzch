@@ -60,6 +60,9 @@
         display: inline-block;
         line-height: 35px;
       }
+      .container {
+        max-width: 100%;
+      }
     }
     .klatzch-messenger-history-container {
       padding-left: 7px;
