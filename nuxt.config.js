@@ -21,6 +21,7 @@ module.exports = {
    ** Add Bootstrap
    */
   css: ['bootstrap/dist/css/bootstrap.css',
+    'font-awesome/css/font-awesome.css',
     {src: '~assets/scss/app.scss', lang: 'scss'}
   ],
   /*
