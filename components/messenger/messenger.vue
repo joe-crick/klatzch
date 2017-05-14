@@ -4,7 +4,7 @@
     <div class="klatzch-messenger-header">
       <div class="container">
         <h4>Messaging</h4>
-        <button class="btn btn-klatzch-tertiary pull-right" @click="close">x</button>
+        <button class="btn btn-klatzch-tertiary right" @click="close">x</button>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -51,10 +51,12 @@
     left: 100px;
     background-color: $sea-whitish;
     border-radius: 10px;
+
     .klatzch-messenger-header {
       border-radius: 10px 10px 0 0;
       background-color: $sea-greenish;
       padding: 10px;
+
       h4 {
         cursor: move;
         display: inline-block;
