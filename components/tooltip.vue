@@ -28,7 +28,7 @@
 <style lang="scss">
   @import '../assets/scss/globals';
 
-  .klatsch-tooltip {
+  .klatzch-tooltip {
     display: inline-block;
     position: absolute;
     @include small {
@@ -39,10 +39,10 @@
       color: $sea-coralish;
       cursor: help;
     }
-    &:hover + .klatsch-tooltip-body {
+    &:hover + .klatzch-tooltip-body {
       display: block;
     }
-    .klatsch-tooltip-body {
+    .klatzch-tooltip-body {
       display: none;
       position: absolute;
       background-color: $sea-bright-white;

@@ -1,4 +1,4 @@
-@import './imports';
+@import './globals';
 
 body {
   background-color: $sea-whitish;
@@ -19,27 +19,27 @@ body {
   }
   .btn {
     cursor: pointer;
-    &: hover {
+    &:hover {
       background-color: $sea-pinkish;
     }
   }
-  .btn-klatsch-danger {
+  .btn-klatzch-danger {
     background-color: $sea-reddish;
     color: $sea-whitish;
   }
-  .btn-klatsch-success {
+  .btn-klatzch-success {
     background-color: $sea-yellowish;
     color: $sea-whitish;
   }
-  .btn-klatsch-primary {
+  .btn-klatzch-primary {
     background-color: $sea-coralish;
     color: $sea-whitish;
   }
-  .btn-klatsch-secondary {
+  .btn-klatzch-secondary {
     background-color: $sea-greenish;
     color: $sea-whitish;
   }
-  .btn-klatsch-tertiary {
+  .btn-klatzch-tertiary {
     background-color: $sea-whitish;
     color: $sea-blackish;
   }
@@ -53,9 +53,9 @@ body {
   .vertical-separator {
     border-right: 1px solid $border-color;
   }
-  .klatsch-tooltip {
+  .klatzch-tooltip {
     margin-left: 5px;
-    .klatsch-tooltip-body {
+    .klatzch-tooltip-body {
       @extend .border;
     }
   }

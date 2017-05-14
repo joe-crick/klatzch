@@ -1,0 +1,40 @@
+// Media Query Mixins
+$break-small-min: 320px
+$break-small-max: 568px
+
+$break-med-min: 570px
+$break-med-max: 767px
+
+$break-lg-max: 1023px
+
+@mixin small
+  @media (min-width: #{$break-small-min}) and (max-width: #{$break-small-max})
+    @content
+
+@mixin med
+  @media (min-width: #{$break-med-min}) and (max-width: #{$break-med-max})
+    @content
+
+@mixin large
+  @media (min-width: #{$break-lg-max})
+    @content
+
+
+// Colors
+$sea-greenish: #bfd8d2
+$sea-coralish: #df744a
+$sea-yellowish: #dcb239
+$sea-pinkish: #fedcd2
+$sea-reddish: #e24e42
+$sea-grayish: #F7F7F9
+$sea-whitish: snow
+$sea-bright-white: white
+$border-color: #eceeef
+$sea-blackish: #424B56
+
+
+.border
+  border: 1px solid $border-color
+
+.input-border
+  border: 1px solid rgba(0,0,0,.15)
