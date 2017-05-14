@@ -1,5 +1,7 @@
 # klatzch
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/joe-crick/klatzch.svg?token=fd059f79f387a8bbe72086d8b932f3df0f75994506c0b1ba94a3524a18c5dca4&ts=1494773639221)](https://greenkeeper.io/)
+
 > Klatzch
 
 ## Build Setup
