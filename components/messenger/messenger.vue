@@ -4,7 +4,6 @@
     <div class="klatzch-messenger-header">
       <div class="container">
         <h4>Messaging</h4>
-        <!--TODO: Remove the close-messenger id used for mocking, and replace with onClick-->
         <button class="btn btn-klatzch-tertiary pull-right" @click="close">x</button>
         <div class="clearfix"></div>
       </div>
