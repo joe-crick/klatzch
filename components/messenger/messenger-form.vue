@@ -43,6 +43,20 @@
   };
 </script>
 
-<style>
+<style lang="scss">
+  .klatzch-chat-form {
+    .send-message {
+      color: snow;
+      background-color: #df744a;
+      cursor: pointer;
+    }
+    .send-silent {
+      text-align: center;
+      margin-top: 5px;
+    }
+    .input-group {
+      width: 90%;
+    }
+  }
 
 </style>
