@@ -19,8 +19,15 @@
         messages: state => state.messages
       })
     },
+    data () {
+      return {
+        messenger: {}
+      };
+    },
     mounted () {
-      import('draggabilly').then(Drag => new Drag('.klatzch-messenger', {}));
+      import('draggabilly').then(Drag => {
+        this.messenger = new Drag('.klatzch-messenger', {});
+      });
     }
   };
 </script>

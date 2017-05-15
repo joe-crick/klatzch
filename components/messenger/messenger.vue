@@ -4,7 +4,10 @@
     <div class="klatzch-messenger-header">
       <div class="container">
         <h4>Messaging</h4>
-        <button class="btn btn-klatzch-tertiary right" @click="toggle">{{ displayIndicator }}</button>
+        <button
+          class="btn btn-klatzch-tertiary right"
+          @click="toggle">{{ displayIndicator }}
+        </button>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -30,7 +33,13 @@
     },
     methods: {
       toggle () {
-        this.display = this.display === 'collapsed' ? 'expanded' : 'collapsed';
+        if (this.display === 'collapsed') {
+          this.display = 'expanded';
+          this.displayIndicator = '-';
+        } else {
+          this.display = 'collapsed';
+          this.displayIndicator = '+';
+        }
       }
     },
     data () {
@@ -55,11 +64,22 @@
     background-color: $sea-whitish;
     border-radius: 10px;
 
+    &.collapsed {
+      position: fixed;
+      bottom: 62px;
+      right: 0;
+      left: inherit;
+      height: 0;
+      top: inherit;
+      .klatzch-messenger-history-container, .klatzch-messenger-form {
+        display: none;
+      }
+    }
+
     .klatzch-messenger-header {
       border-radius: 10px 10px 0 0;
       background-color: $sea-greenish;
       padding: 10px;
-
       h4 {
         cursor: move;
         display: inline-block;
@@ -69,6 +89,7 @@
         max-width: 100%;
       }
     }
+
     .klatzch-messenger-history-container {
       padding-left: 7px;
       background-color: $sea-bright-white;
@@ -76,6 +97,7 @@
       max-height: 57%;
       border-radius: 5px
     }
+
     .klatzch-messenger-form {
       &.container {
         height: 10%;
@@ -83,5 +105,6 @@
         bottom: 45px;
       }
     }
+
   }
 </style>
