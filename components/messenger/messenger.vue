@@ -20,6 +20,8 @@
 <script>
   import MessengerHistory from './messenger-history.vue';
   import MessengerForm from './messenger-form.vue';
+  import Draggable from 'draggabilly';
+
   export default {
     name: 'app',
     components: {
@@ -30,6 +32,9 @@
       close () {
         this.display = false;
       }
+    },
+    mounted () {
+      new Draggable('.klatzch-messenger', {}); // eslint-disable-line no-new
     },
     data () {
       return {
