@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="klatzch-messenger-history-container">
-      <messenger-history></messenger-history>
+      <messenger-history :messages="messages"></messenger-history>
     </div>
     <div class="klatzch-messenger-form container">
       <messenger-form></messenger-form>
@@ -20,10 +20,10 @@
 <script>
   import MessengerHistory from './messenger-history.vue';
   import MessengerForm from './messenger-form.vue';
-  import Draggable from 'draggabilly';
 
   export default {
     name: 'app',
+    props: ['messages'],
     components: {
       MessengerHistory,
       MessengerForm
@@ -32,9 +32,6 @@
       close () {
         this.display = false;
       }
-    },
-    mounted () {
-      new Draggable('.klatzch-messenger', {}); // eslint-disable-line no-new
     },
     data () {
       return {
