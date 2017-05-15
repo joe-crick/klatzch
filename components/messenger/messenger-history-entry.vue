@@ -19,6 +19,22 @@
   };
 </script>
 
-<style>
+<style lang="scss">
+  @import '../../assets/scss/globals.scss';
 
+  .klatzch-history-entry {
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    &:hover {
+      background-color: $sea-grayish;
+    }
+    .icon-col {
+      padding-left: 0;
+    }
+    .mini-profile-image {
+      @extend .mini-profile-image;
+      border-radius: 100px;
+    }
+  }
 </style>

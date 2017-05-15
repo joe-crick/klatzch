@@ -1,6 +1,8 @@
 module.exports = {
   /*
    ** Headers of the page
+   * NOTE: Adding Bootstrap in via the css loader didn't load it correctly. None of the
+   * grid classes showed up. Loading it via the link property in the config fixed this.
    */
   head: {
     title: 'Klatzch',
@@ -10,7 +12,8 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'stylesheet', integrity: 'sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin: 'anonymous', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'}
     ]
   },
   /*
@@ -20,7 +23,7 @@ module.exports = {
   /*
    ** Add Bootstrap
    */
-  css: ['bootstrap/dist/css/bootstrap.css',
+  css: [
     'font-awesome/css/font-awesome.css',
     {src: '~assets/scss/app.scss', lang: 'scss'}
   ],
