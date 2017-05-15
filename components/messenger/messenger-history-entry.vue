@@ -15,11 +15,7 @@
   export default {
     name: 'messenger-history-entry',
     components: {UserMiniprofileIcon},
-    data () {
-      return {
-        message: ''
-      };
-    }
+    props: ['message']
   };
 </script>
 

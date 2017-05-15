@@ -3,16 +3,17 @@
   <div class="klatzch-chat-history container">
     <div class="row">
       <div v-for="message in messages" class="col-12 history-row">
-        <span>{{message.message}}</span>
+        <messenger-history-entry :message="message.message"></messenger-history-entry>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import MessengerHistoryEntry from './messenger-history-entry.vue';
   export default {
     name: 'messenger-history',
-    components: {},
+    components: {MessengerHistoryEntry},
     props: ['messages']
   };
 </script>
