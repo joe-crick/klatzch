@@ -45,6 +45,9 @@
 
 <style lang="scss">
   .klatzch-chat-form {
+    .message-input-column {
+      margin-left: -20 px
+    }
     .send-message {
       color: snow;
       background-color: #df744a;

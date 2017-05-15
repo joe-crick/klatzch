@@ -76,7 +76,7 @@
       border-radius: 5px
     }
     .klatzch-messenger-form {
-      .container {
+      &.container {
         height: 10%;
         position: absolute;
         bottom: 45px;
