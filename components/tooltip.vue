@@ -9,19 +9,8 @@
 </template>
 
 <script>
-  import { mapState, mapMutations } from 'vuex';
   export default {
-    name: 'tooltip',
-    components: {},
-    data () {
-      return {};
-    },
-    computed: {
-      ...mapState({counter: state => state.counter})
-    },
-    methods: {
-      ...mapMutations([''])
-    }
+    name: 'tooltip'
   };
 </script>
 
@@ -39,7 +28,7 @@
       color: $sea-coralish;
       cursor: help;
     }
-    &:hover + .klatzch-tooltip-body {
+    &:hover > .klatzch-tooltip-body {
       display: block;
     }
     .klatzch-tooltip-body {
