@@ -1,10 +1,10 @@
 <!-- messenger.vue -->
 <template>
-  <div class="klatzch-messenger" v-if="display">
+  <div class="klatzch-messenger" :class="display">
     <div class="klatzch-messenger-header">
       <div class="container">
         <h4>Messaging</h4>
-        <button class="btn btn-klatzch-tertiary right" @click="close">x</button>
+        <button class="btn btn-klatzch-tertiary right" @click="toggle">{{ displayIndicator }}</button>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -18,8 +18,6 @@
 </template>
 
 <script>
-  /* eslint no-new: 0 */
-
   import MessengerHistory from './messenger-history.vue';
   import MessengerForm from './messenger-form.vue';
 
@@ -31,17 +29,15 @@
       MessengerForm
     },
     methods: {
-      close () {
-        this.display = false;
+      toggle () {
+        this.display = this.display === 'collapsed' ? 'expanded' : 'collapsed';
       }
     },
     data () {
       return {
-        display: true
+        display: 'collapsed',
+        displayIndicator: '+'
       };
-    },
-    mounted () {
-      import('draggabilly').then(Drag => new Drag('.klatzch-messenger', {}));
     }
   };
 </script>

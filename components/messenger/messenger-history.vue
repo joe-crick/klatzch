@@ -18,6 +18,9 @@
   };
 </script>
 
-<style lang="sass">
-
+<style lang="scss">
+  .klatzch-chat-history {
+    padding-top: 10px;
+    height: 100%;
+  }
 </style>

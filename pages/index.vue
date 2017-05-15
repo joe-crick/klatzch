@@ -18,6 +18,9 @@
       ...mapState({
         messages: state => state.messages
       })
+    },
+    mounted () {
+      import('draggabilly').then(Drag => new Drag('.klatzch-messenger', {}));
     }
   };
 </script>
