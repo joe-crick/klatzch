@@ -18,6 +18,8 @@
 </template>
 
 <script>
+  /* eslint no-new: 0 */
+
   import MessengerHistory from './messenger-history.vue';
   import MessengerForm from './messenger-form.vue';
 
@@ -37,6 +39,9 @@
       return {
         display: true
       };
+    },
+    mounted () {
+      import('draggabilly').then(Drag => new Drag('.klatzch-messenger', {}));
     }
   };
 </script>
