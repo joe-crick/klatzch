@@ -21,9 +21,9 @@
       })
     },
     methods: {
-      ...mapMutations([
-        'initMessenger'
-      ])
+      ...mapMutations({
+        initMessenger: 'messenger/initMessenger'
+      })
     },
     mounted () {
       this.initMessenger();

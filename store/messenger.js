@@ -4,8 +4,8 @@ export const state = {
     {user: 'baby-face', message: 'Hello!'},
     {user: 'mangold', message: '\'sup?'}
   ],
-  messenger: {
-    displayIndicator: '-',
+  client: {
+    displayIndicator: '+',
     display: 'collapsed',
     draggable: {}
   }
@@ -14,12 +14,12 @@ export const state = {
 export const mutations = {
   initMessenger (state) {
     import('draggabilly').then(Drag => {
-      state.messenger.draggable = new Drag('.klatzch-messenger', {});
-      state.messenger.draggable.disable();
+      state.client.draggable = new Drag('.klatzch-messenger', {});
+      state.client.draggable.disable();
     });
   },
   toggleMessenger (state) {
-    const mess = state.messenger;
+    const mess = state.client;
     if (mess.display === 'collapsed') {
       mess.display = 'expanded';
       mess.displayIndicator = '-';
