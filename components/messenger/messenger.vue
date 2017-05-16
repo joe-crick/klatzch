@@ -6,7 +6,7 @@
         <h4>Messaging</h4>
         <button
           class="btn btn-klatzch-tertiary right"
-          @click="toggle">{{ displayIndicator }}
+          @click="toggleMessenger">{{displayIndicator}}
         </button>
         <div class="clearfix"></div>
       </div>
@@ -23,6 +23,7 @@
 <script>
   import MessengerHistory from './messenger-history.vue';
   import MessengerForm from './messenger-form.vue';
+  import { mapState, mapMutations } from 'vuex';
 
   export default {
     name: 'app',
@@ -31,22 +32,17 @@
       MessengerHistory,
       MessengerForm
     },
-    methods: {
-      toggle () {
-        if (this.display === 'collapsed') {
-          this.display = 'expanded';
-          this.displayIndicator = '-';
-        } else {
-          this.display = 'collapsed';
-          this.displayIndicator = '+';
-        }
-      }
+    computed: {
+      ...mapState({
+        messages: state => state.messages,
+        display: state => state.messenger.display,
+        displayIndicator: state => state.messenger.displayIndicator
+      })
     },
-    data () {
-      return {
-        display: 'collapsed',
-        displayIndicator: '+'
-      };
+    methods: {
+      ...mapMutations([
+        'toggleMessenger'
+      ])
     }
   };
 </script>
