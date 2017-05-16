@@ -15,6 +15,7 @@ export const mutations = {
   initMessenger (state) {
     import('draggabilly').then(Drag => {
       state.messenger.draggable = new Drag('.klatzch-messenger', {});
+      state.messenger.draggable.disable();
     });
   },
   toggleMessenger (state) {
@@ -22,9 +23,13 @@ export const mutations = {
     if (mess.display === 'collapsed') {
       mess.display = 'expanded';
       mess.displayIndicator = '-';
+      mess.draggable.enable();
     } else {
       mess.display = 'collapsed';
       mess.displayIndicator = '+';
+      mess.draggable.disable();
+      // TODO: Find better way to do this that doesn't directly touch DOM
+      document.querySelector('.klatzch-messenger').removeAttribute('style');
     }
   }
 };
