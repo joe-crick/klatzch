@@ -8,14 +8,14 @@
           class="btn btn-klatzch-tertiary right"
           @click="toggleMessenger">{{displayIndicator}}
         </button>
-        <div class="clearfix"></div>
+        <div class="clearfix"/>
       </div>
     </div>
     <div class="klatzch-messenger-history-container">
-      <messenger-history :messages="messages"></messenger-history>
+      <messenger-history :messages="messages"/>
     </div>
     <div class="klatzch-messenger-form container">
-      <messenger-form></messenger-form>
+      <messenger-form/>
     </div>
   </div>
 </template>
