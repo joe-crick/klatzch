@@ -8,7 +8,7 @@
 
 <script>
   import Messenger from '~components/messenger/messenger.vue';
-  import { mapState } from 'vuex';
+  import { mapState, mapMutations } from 'vuex';
 
   export default {
     components: {
@@ -16,18 +16,17 @@
     },
     computed: {
       ...mapState({
-        messages: state => state.messages
+        messages: state => state.messages,
+        messenger: state => state.messenger
       })
     },
-    data () {
-      return {
-        messenger: {}
-      };
+    methods: {
+      ...mapMutations([
+        'initMessenger'
+      ])
     },
     mounted () {
-      import('draggabilly').then(Drag => {
-        this.messenger = new Drag('.klatzch-messenger', {});
-      });
+      this.initMessenger();
     }
   };
 </script>
