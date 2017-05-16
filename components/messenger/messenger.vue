@@ -34,15 +34,15 @@
     },
     computed: {
       ...mapState({
-        messages: state => state.messages,
-        display: state => state.messenger.display,
-        displayIndicator: state => state.messenger.displayIndicator
+        messages: state => state.messenger.messages,
+        display: state => state.messenger.client.display,
+        displayIndicator: state => state.messenger.client.displayIndicator
       })
     },
     methods: {
-      ...mapMutations([
-        'toggleMessenger'
-      ])
+      ...mapMutations({
+        toggleMessenger: 'messenger/toggleMessenger'
+      })
     }
   };
 </script>
