@@ -5,9 +5,14 @@
   "author": "Joe Crick <joe@josephcrick.com>",
   "private": true,
   "dependencies": {
+    "apollo-client": "^1.2.2",
     "draggabilly": "^2.1.1",
     "font-awesome": "^4.7.0",
-    "nuxt": "latest"
+    "graphql-tag": "^2.1.0",
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.6.1",
+    "nuxt": "latest",
+    "simple-graphql-client": "^0.1.0"
   },
   "scripts": {
     "demo": "browserify -t vueify -e src/main.js -o ./build/build.js",
@@ -27,6 +32,7 @@
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-standard": "^2.0.1",
+    "json-loader": "^0.5.4",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.5"
   }

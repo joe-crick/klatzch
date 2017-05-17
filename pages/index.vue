@@ -8,7 +8,7 @@
 
 <script>
   import Messenger from '~components/messenger/messenger.vue';
-  import { mapState, mapMutations } from 'vuex';
+  import { mapState, mapMutations, mapActions } from 'vuex';
 
   export default {
     components: {
@@ -23,10 +23,14 @@
     methods: {
       ...mapMutations({
         initMessenger: 'messenger/initMessenger'
+      }),
+      ...mapActions({
+        loadMessages: 'messenger/loadMessages'
       })
     },
     mounted () {
       this.initMessenger();
+      this.loadMessages('1');
     }
   };
 </script>
