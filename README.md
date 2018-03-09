@@ -1,5 +1,7 @@
 # klatzch
 
+A port of my React Klatzch project to the awesome VueJS!.
+
 > Klatzch
 
 ## Build Setup
